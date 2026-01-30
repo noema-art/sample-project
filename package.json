@@ -1,0 +1,24 @@
+{
+  "name": "sample-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noema-art/sample-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noema-art/sample-project/issues"
+  },
+  "homepage": "https://github.com/noema-art/sample-project#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
