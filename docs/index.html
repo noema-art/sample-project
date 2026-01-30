@@ -1,63 +1,64 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>sample-project • Algorithms Demo</title>
+    <title>sample-project • 알고리즘 데모</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header class="container">
-      <h1>Algorithms Demo</h1>
+      <h1>알고리즘 데모</h1>
       <p class="muted">
-        Static web demo for <code>sample-project</code>. No build step, no external dependencies.
+        <code>sample-project</code>용 정적 웹 데모입니다. 빌드 단계/외부 의존성 없이 동작합니다.
       </p>
     </header>
 
     <main class="container grid">
       <section class="panel">
-        <h2>Run a demo</h2>
-        <label class="label" for="demoSelect">Algorithm</label>
+        <h2>데모 실행</h2>
+        <label class="label" for="demoSelect">알고리즘 선택</label>
         <select id="demoSelect">
-          <option value="dijkstra">Dijkstra (shortest path)</option>
-          <option value="kruskal">Kruskal (MST)</option>
-          <option value="topsort">Topological sort (Kahn)</option>
-          <option value="bsearch">Binary search (+ bounds)</option>
-          <option value="mergesort">Merge sort</option>
+          <option value="dijkstra">다익스트라 (최단경로)</option>
+          <option value="kruskal">크루스칼 (MST)</option>
+          <option value="topsort">위상 정렬 (Kahn)</option>
+          <option value="bsearch">이분 탐색 (+ lower/upper bound)</option>
+          <option value="mergesort">병합 정렬</option>
         </select>
 
         <div class="row">
-          <button id="runBtn">Run</button>
-          <button id="resetBtn" class="secondary">Reset</button>
+          <button id="runBtn">실행</button>
+          <button id="resetBtn" class="secondary">초기화</button>
         </div>
 
-        <h3>Input (editable JSON)</h3>
+        <h3>입력 (수정 가능한 JSON)</h3>
         <textarea id="input" spellcheck="false"></textarea>
         <p class="muted small">
-          Tip: keep weights non-negative for Dijkstra. For graphs, nodes are 0..n-1.
+          팁: 다익스트라는 가중치가 음수가 아니어야 합니다. 그래프 노드는 0..n-1 입니다.
         </p>
       </section>
 
       <section class="panel">
-        <h2>Output</h2>
+        <h2>출력</h2>
         <pre id="output" aria-live="polite"></pre>
       </section>
 
       <section class="panel wide">
-        <h2>Notes</h2>
+        <h2>메모</h2>
         <ul>
-          <li>Dijkstra: adjacency list with <code>{to, w}</code> edges</li>
-          <li>Kruskal: edges list with <code>{u, v, w}</code></li>
-          <li>Topological sort: adjacency list with destination nodes</li>
-          <li>Binary search: sorted array (ascending)</li>
-          <li>Merge sort: returns new sorted array</li>
+          <li>다익스트라: 인접 리스트, 간선은 <code>{to, w}</code></li>
+          <li>크루스칼: 간선 리스트, 간선은 <code>{u, v, w}</code></li>
+          <li>위상 정렬: 인접 리스트(도착 정점 배열)</li>
+          <li>이분 탐색: 오름차순 정렬된 배열</li>
+          <li>병합 정렬: 새 배열을 반환(원본 불변)</li>
         </ul>
       </section>
     </main>
 
     <footer class="container muted small">
       <p>
-        Source repo: <a href="https://github.com/noema-art/sample-project" target="_blank" rel="noreferrer">noema-art/sample-project</a>
+        저장소: <a href="https://github.com/noema-art/sample-project" target="_blank" rel="noreferrer">noema-art/sample-project</a>
+        · 웹 데모: <a href="https://noema-art.github.io/sample-project/" target="_blank" rel="noreferrer">GitHub Pages</a>
       </p>
     </footer>
 
