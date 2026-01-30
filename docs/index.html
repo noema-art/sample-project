@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>sample-project • Algorithms Demo</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Algorithms Demo</h1>
+      <p class="muted">
+        Static web demo for <code>sample-project</code>. No build step, no external dependencies.
+      </p>
+    </header>
+
+    <main class="container grid">
+      <section class="panel">
+        <h2>Run a demo</h2>
+        <label class="label" for="demoSelect">Algorithm</label>
+        <select id="demoSelect">
+          <option value="dijkstra">Dijkstra (shortest path)</option>
+          <option value="kruskal">Kruskal (MST)</option>
+          <option value="topsort">Topological sort (Kahn)</option>
+          <option value="bsearch">Binary search (+ bounds)</option>
+          <option value="mergesort">Merge sort</option>
+        </select>
+
+        <div class="row">
+          <button id="runBtn">Run</button>
+          <button id="resetBtn" class="secondary">Reset</button>
+        </div>
+
+        <h3>Input (editable JSON)</h3>
+        <textarea id="input" spellcheck="false"></textarea>
+        <p class="muted small">
+          Tip: keep weights non-negative for Dijkstra. For graphs, nodes are 0..n-1.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Output</h2>
+        <pre id="output" aria-live="polite"></pre>
+      </section>
+
+      <section class="panel wide">
+        <h2>Notes</h2>
+        <ul>
+          <li>Dijkstra: adjacency list with <code>{to, w}</code> edges</li>
+          <li>Kruskal: edges list with <code>{u, v, w}</code></li>
+          <li>Topological sort: adjacency list with destination nodes</li>
+          <li>Binary search: sorted array (ascending)</li>
+          <li>Merge sort: returns new sorted array</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="container muted small">
+      <p>
+        Source repo: <a href="https://github.com/noema-art/sample-project" target="_blank" rel="noreferrer">noema-art/sample-project</a>
+      </p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
